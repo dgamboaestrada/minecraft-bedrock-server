@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  minecraft-bedrock:
+    image: itzg/minecraft-bedrock-server:latest
+    container_name: 'minecraft-bedrock'
+    user: "${UID}:${GID}"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - './data/:/data'
+    ports:
+      - "${PORT}:19132/udp"
+    environment:
+      - EULA=TRUE
+      - SERVER_NAME=${SERVER_NAME}
+      - DIFFICULTY=${DIFFICULTY}
+      - PLAYER_IDLE_TIMEOUT=${PLAYER_IDLE_TIMEOUT}
+      - LEVEL_NAME=${LEVEL_NAME}
+      - WHITE_LIST=${WHITE_LIST}
+      - WHITE_LIST_USERS=${USERS}
+      - TEXTUREPACK_REQUIRED=true
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"

@@ -1,0 +1,8 @@
+# Docker
+.env
+
+# Vim files
+*.swp
+
+# Minecraft data
+data/
