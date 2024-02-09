@@ -20,6 +20,7 @@ services:
       - WHITE_LIST=${WHITE_LIST}
       - WHITE_LIST_USERS=${USERS}
       - TEXTUREPACK_REQUIRED=true
+      - ALLOW_CHEATS=${ALLOW_CHEATS}
     restart: always
     logging:
       driver: "json-file"

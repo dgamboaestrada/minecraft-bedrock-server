@@ -3,6 +3,7 @@ Docker compose Minecraft Bedrock Server:
 - Docker image:https://hub.docker.com/r/itzg/minecraft-bedrock-server
 - Github docker image project: https://github.com/itzg/docker-minecraft-bedrock-server
 
+
 # Setup
 1. Creting `.env` file.
 ```bash
@@ -20,3 +21,6 @@ In the project root path execute:
 ```bash
 ./start.sh
 ```
+
+# Getting xuid user
+https://www.cxkes.me/xbox/xuid
